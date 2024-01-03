@@ -1,0 +1,14 @@
+👇Códigos:
+
+- %temp%
+
+- temp
+
+- prefetch
+
+- eventvwr
+
+- %SystemRoot%\System32\Cmd.exe /c Cleanmgr /sageset:65535 &Cleanmgr /sagerun:6553
+
+URL del video
+https://youtu.be/TjylqFd09QQ?t=1
