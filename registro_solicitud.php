@@ -1,10 +1,3 @@
-<?php
-require "./database/database.php";
-//$pdo= new pdo ('mysql:host=localhost;dbname=bdd_auto' , 'root', '');
-
-?>
-
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -48,7 +41,7 @@ require "./database/database.php";
   LLENAR SOLICITUD
 </h2>
 
-<form action="https://formsubmit.co/querycalzados@gmail.com" method="POST"> 
+<form action="http://localhost/Venta_de_Vehiculos/registro_solicitud.php" method="POST"> 
 
 <div id = "texto">  
 <LAbel for="Nombre">Nombres</LAbel>
@@ -69,25 +62,51 @@ require "./database/database.php";
 
 
 <div id = "texto1">  
-<LAbel>Ingreso</LAbel>
-<input type="text" name = "ingreso" required > 
-<LAbel>Direccion</LAbel>
-<input type="text" name = "direccion">
-<LAbel>Marca</LAbel>
-<input type="text" name = "marca"> 
-<LAbel>Año</LAbel>
-<input type="text" name = "ano"> 
+<LAbel for="ingreso">ingreso</LAbel>
+<input type="text" name = "ingreso" id ="ingreso" required > 
+
+<LAbel for="direccion">Direccion</LAbel>
+<input type="text" name = "direccion" id ="direccion" > 
+
+<LAbel for="marca">Marca</LAbel>
+<input type="text" name = "dmarca" id ="marca" > 
+
+<LAbel for="ano">Año</LAbel>
+<input type="text" name = "ano" id ="ano" > 
+
 
 </div>
-<input class ="btn" type="submit" name="insertar solicitud" value="ENVIAR SOLICITUD " > <br>
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next"  values="http://localhost/Venta_de_Vehiculos/registro_solicitud.php">
-
-
-</script>
+<input class ="btn" type="submit" name="enviar" value="ENVIAR SOLICITUD" > <br>
 </form>
 
+<?php
+if(isset($_POST["enviar"]));{
+  $nombres = $_POST["nombres"];
+        $apellidos = $_POST["apellidos"];
+        $cedula = $_POST["cedula"];
+        $email = $_POST["email"];
+        $telefono = $_POST["telefono"];
+        $ingreso = $_POST["ingreso"];
+        $direccion = $_POST["direccion"];
+        $marca = $_POST["marca"];
+        $ano = $_POST["ano"];
 
+        $destinatario="querycalzados@gmail.com";
+        $asunto="Nuevo mensaje de $imail " ;
+        $contenido="Nombre:$nombre \n";
+        $contenido="Email:$email \n";
+
+        $header ="from:memocode@soft.com";
+
+        $mail="mail($destinatario,$asunto,$contenido,$header";
+
+        if($mail){
+          echo "<script>alert (Su solicitud hacido envia estaremos en contacto con usted los mas pronto posible, muchas gracias:)');</script>";
+}else{
+  echo "<script>alert (Enesto momento estamos teniendo problema para recivir su solicitud intentelo de nuevo:(');</script>";
+}
+}
+?>
 
 <!-- comentario-->
 
