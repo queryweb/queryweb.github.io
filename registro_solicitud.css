@@ -1,12 +1,9 @@
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    list-style: none;
     box-sizing: border-box;
-    text-decoration: none;
-  }
-
+    }
+    
   .encabesado{
     /* encabesado */ 
     display: flex ;
@@ -33,15 +30,16 @@
 
 }
 #texto1{ 
- 
+ font-size:25px;
  width: 200px;
  padding: -0px 100px;
  box-sizing: border-box;
- font-size: 18px;
+
  color: #0d1fc2; 
+ 
 }
 #texto{ 
-  font-size: 18;
+ font-size: 25px;
  width: 200px;
  padding:  0px 400px;
  box-sizing: border-box;
@@ -50,7 +48,15 @@
 
 }
 
-
+input{ 
+ font-size: 25px;
+  color: red;
+ 
+ }
+label{ 
+  font-size: 25px;
+   color: black;
+  }
 .btn{  
 background-color: #9c0a0a;
 padding: 10px 15px;
